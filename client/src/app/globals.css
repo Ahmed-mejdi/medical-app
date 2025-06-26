@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --card: #fff;
+  --card-shadow: 0 8px 32px 0 rgba(0, 80, 180, 0.10), 0 1.5px 6px 0 rgba(0,0,0,0.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --card: #181f2a;
+    --card-shadow: 0 8px 32px 0 rgba(0, 80, 180, 0.18), 0 1.5px 6px 0 rgba(0,0,0,0.10);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.25s, color 0.25s;
+}
+
+/* Animations et micro-interactions */
+.card, .bg-white, .rounded-3xl, .rounded-lg, .shadow, .shadow-md, .shadow-xl {
+  transition: box-shadow 0.25s, transform 0.18s, background 0.25s;
+}
+.card:hover, .bg-white:hover, .rounded-3xl:hover, .rounded-lg:hover, .shadow:hover, .shadow-md:hover, .shadow-xl:hover {
+  box-shadow: 0 8px 32px 0 rgba(0, 80, 180, 0.10), 0 1.5px 6px 0 rgba(0,0,0,0.04);
+  transform: translateY(-2px) scale(1.02);
+}
+
+button, .btn {
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.15s;
+  outline: none;
+}
+button:active, .btn:active {
+  transform: scale(0.97);
+}
+button:focus-visible, .btn:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+input, textarea, select {
+  transition: border 0.18s, box-shadow 0.18s;
+}
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+}
+
+/* Skeleton loader */
+.skeleton {
+  background: linear-gradient(90deg, #e0e7ef 25%, #f3f4f6 50%, #e0e7ef 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.2s infinite linear;
+  border-radius: 0.75rem;
+}
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
