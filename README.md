@@ -70,7 +70,7 @@ Le frontend sera accessible sur [http://localhost:3000](http://localhost:3000) e
 5. Ouvrez une Pull Request
 
 ## Auteurs
-- Projet initial par [Votre Nom ou Organisation]
+- Projet initial par [Bedda]
 
 ## Licence
 Ce projet est sous licence MIT. 
